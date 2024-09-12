@@ -1,0 +1,83 @@
+{
+  "/Users/k_tsuneda/Documents/my/nuxt/serverless-test": {
+    "versionSfCore": null,
+    "versionFramework": "4.3.2",
+    "isWithinCompose": false,
+    "isCompose": false,
+    "composeOrgName": null,
+    "composeResolverProviders": {
+      "default-aws-credential-resolver": "<REDACTED>"
+    },
+    "composeServiceName": null,
+    "servicePath": "/Users/k_tsuneda/Documents/my/nuxt/serverless-test",
+    "serviceConfigFileName": "serverless.yml",
+    "service": {
+      "org": "companycompany",
+      "app": "serverless-test-1",
+      "service": "nuxt3-sample",
+      "provider": {
+        "name": "aws",
+        "stage": "dev",
+        "region": "ap-northeast-1",
+        "runtime": "nodejs16.x",
+        "versionFunctions": true
+      },
+      "package": {
+        "patterns": [
+          "!**",
+          ".output/**"
+        ],
+        "artifactsS3KeyDirname": "serverless/nuxt3-sample/dev/code-artifacts"
+      },
+      "functions": {
+        "NuxtSsrEngine": {
+          "handler": ".output/server/index.handler",
+          "url": true,
+          "events": [],
+          "name": "nuxt3-sample-dev-NuxtSsrEngine"
+        }
+      }
+    },
+    "serviceRawFile": "# \"org\" ensures this Service is used with the correct Serverless Framework Access Key.\norg: companycompany\n# \"app\" enables Serverless Framework Dashboard features and sharing them with other Services.\napp: serverless-test-1\nservice: nuxt3-sample\nprovider:\n  name: aws\n  stage: dev\n  region: ap-northeast-1\n  runtime: nodejs16.x\npackage:\n  patterns:\n    - '!**'\n    - '.output/**' # nuxt run buildの出力ディレクトリ\nfunctions:\n  NuxtSsrEngine:\n    handler: '.output/server/index.handler'\n    url: true # Lambda function URLを有効",
+    "command": [
+      "deploy"
+    ],
+    "options": {},
+    "error": {
+      "message": "AWS credentials missing or invalid. Original error from AWS: Could not load credentials from any providers",
+      "code": "AWS_CREDENTIALS_MISSING"
+    },
+    "params": {},
+    "machineId": "61e24c5c29847f1917eb2e81ae996816",
+    "stage": "dev",
+    "accessKeyV2": "<REDACTED>",
+    "accessKeyV1": "<REDACTED>",
+    "orgId": "9e516355-cff2-478e-a5b1-157969d81f33",
+    "orgName": "companycompany",
+    "userId": "2jjgJtQ6j72sw7mM0G",
+    "dashboard": {
+      "isEnabledForService": true,
+      "requiredAuthentication": false,
+      "orgFeaturesInUse": {
+        "providers": false,
+        "monitoring": false
+      },
+      "orgObservabilityIntegrations": null,
+      "serviceAppId": "H8CWMgYzBCRpwtjmWR",
+      "serviceProvider": null,
+      "instanceParameters": null
+    },
+    "userName": "companycompany",
+    "subscription": null,
+    "userEmail": "tsunekyos@gmail.com",
+    "projectType": "traditional",
+    "versionSf": "4.3.2",
+    "serviceProviderAwsCfStackName": "nuxt3-sample-dev",
+    "serviceUniqueId": null,
+    "serviceProviderAwsCfStackId": null,
+    "serviceProviderAwsCfStackCreated": null,
+    "serviceProviderAwsCfStackUpdated": null,
+    "serviceProviderAwsCfStackStatus": null,
+    "serviceProviderAwsCfStackOutputs": null
+  }
+}

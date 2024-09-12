@@ -1,5 +1,8 @@
+# "org" ensures this Service is used with the correct Serverless Framework Access Key.
+org: companycompany
+# "app" enables Serverless Framework Dashboard features and sharing them with other Services.
+app: serverless-test-1
 service: nuxt3-sample
-frameworkVersion: '3'
 provider:
   name: aws
   stage: dev
