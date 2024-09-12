@@ -26,6 +26,23 @@
 <script setup lang="ts">
 const route = useRoute();
 const id = route.params.id;
+
+useHead({
+  meta: [
+    {
+      property: 'og:image',
+      content: `https://example.com/images/${id}`
+    },
+    {
+      property: 'og:title',
+      content: `ダッシュボード ${id} - あなたのサービス名`
+    },
+    {
+      property: 'og:description',
+      content: `ダッシュボード ${id} の特定の情報や機能を提供します。`
+    }
+  ]
+})
 </script>
 
 <style scoped>

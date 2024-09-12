@@ -25,7 +25,24 @@
 </template>
 
 <script setup lang="ts">
-// ここにTypeScriptのロジックを追加できます（必要な場合）
+const currentTime = new Date().getTime();
+
+useHead({
+  meta: [
+    {
+      property: 'og:image',
+      content: `https://example.com/images?time=${currentTime}`
+    },
+    {
+      property: 'og:title',
+      content: 'ようこそ - あなたのサービス名'
+    },
+    {
+      property: 'og:description',
+      content: 'ここに簡単な説明文を入れます。サービスの特徴や利点を簡潔に紹介します。'
+    }
+  ]
+})
 </script>
 
 <style scoped>
