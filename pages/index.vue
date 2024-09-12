@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <header class="header">
-      <h1>ようこそ</h1>
+      <h1>ようこそ-ようこそ</h1>
       <nav>
         <ul>
           <li><NuxtLink to="/">ホーム</NuxtLink></li>
